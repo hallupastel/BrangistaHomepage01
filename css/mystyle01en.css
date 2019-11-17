@@ -49,7 +49,7 @@ body {
     font-size:12px;
 }
 
-.jp, .jp:hover, .jp:active, .jp:link, .jp:visited {
+.en, .en:hover, .en:active, .en:link, .en:visited {
     color:#AA1212;
     text-decoration:underline;
 }
