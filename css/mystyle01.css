@@ -4,67 +4,109 @@ a, a:hover, a:active, a:link, a:visited {
 }
 
 body {
-    padding:0px;
     margin:0px;
+    padding:0px;
 }
-
-.header {
+header {
     height:75px;
-    padding:10px;
-    position:relative;
+}
+.container{
+    margin:0px;
+    padding:0px;
 }
 
-.LogoAndLang {
-    float:left;
-    height:100%;
+.HeaderArea {
+    position:fixed;
+    top:0px;
+    left:0px;
+    height:75px;
+    width:100%;
+    padding:5px 0px 10px 0px;
+    padding-top:5px;
+    z-index:999;
+    background-color:white;
+}
+
+.LogoArea {
+    display:inline-block;
+    position:relative;
+    top:5px;
+    width:40%;
+    max-width:200px;
 }
 
 #logoimage {
     position:relative;
-    float:left;
-    width:auto;
+    max-width:200px;
+    width:100%;
     height:100%;
 }
 
-.LanguageChange {
+.LangArea {
+    display:inline-block;
     position:relative;
-    float:left;
+    top:5px;
 }
 
-#changelanglogo {
+#langlogo {
     position:relative;
-    float:left;
     height:20px;
-    top:18px;
-    margin:0px 4px 0px 4px;
+    top:0px;
 }
 
-.LanguageChange>span {
+.LangArea>span {
     position:relative;
-    float:left;
-    top:14px;
 }
 
-.LanguageChange>span>a {
+.LangArea>span>a {
     font-size:12px;
+    font-family:sans-serif;
+    font-weight:bold;
 }
 
 .jp, .jp:hover, .jp:active, .jp:link, .jp:visited {
-    color:#AA1212;
+    color:#C90000;
     text-decoration:underline;
 }
-
-#nav-icon {
+.NavIconArea {
     position:relative;
-    float:left;
-    height:100%;
-    width:20px;
+    top:8px;
+    right:4px;
+    float:right;
+    cursor:pointer;
+    visibility:hidden;
+    display:none;
 }
-.navigator {
+.bar1, .bar2, .bar3 {
+    width:35px;
+    height:5px;
+    border-radius:3px;
+    margin:6px 6px;
+    transition: 0.4s;
+    top:6px;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(45deg) translate(8px, 8px);
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(-45deg) translate(8px, -8px);
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.NaviArea {
     position:relative;
+    top:-4px;
+    display:inline-block;
     float:right;
     height:100%;
-    width:auto;
+    overflow:hidden;
 }
 .navs {
     position:relative;
@@ -73,10 +115,11 @@ body {
 }
 .navs>li {
     position:relative;
-    top:6px;
+    top:10px;
     display:inline-block;
     text-align:center;
-    padding:0px 16px 0px 16px;
+    padding:0px 10px 0px 10px;
+    margin-left:10px;
 }
 
 .navs>li>a {
@@ -86,6 +129,252 @@ body {
 .navs>li>a>span {
     font-size:11px;
     display:block;
-    color:#AA1212;
+    color:#C90000;
     font-weight: bold;
+}
+.MainArea {
+    position:relative;
+}
+.VideoArea {
+    width:100%;
+    border-top:1px solid #C90000;
+    position:relative;
+    overflow:hidden;
+}
+
+#MainVideo {
+    width:100%;
+    min-width:769px;
+    height:auto;
+}
+#bgdotted {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    min-width:769px;
+    height:2000px;
+    float:left;
+ background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQYV2NkYGD4z8DAwMgABXAGNgGwSgwVAFbmAgXQdISfAAAAAElFTkSuQmCC);
+}
+.SloganArea {
+    position:absolute;
+    top:204px;
+    left:100px;
+}
+.SloganArea>p {
+    margin:0px;
+    padding:0px;
+}
+
+#SloganText{
+    font-size:68px;
+    font-family:sans-serif;
+    color:white;
+    text-shadow:2px 2px 0px black;
+}
+
+.SloganInfo {
+    margin-bottom:20px;
+}
+.SloganInfo>p {
+    margin:0px;
+    padding:0px;
+    font-size:24px;
+    font-family:sans-serif;
+    color:white;
+    text-shadow:2px 2px 0px black;
+}
+.SloganBtn {
+    margin:0px;
+    padding:0px;
+    list-style-type:none;
+}
+.SloganBtn>li {
+    display:inline-block;
+    width:208px;
+    height:46px;
+    margin-right:8px;
+    padding-top:11px;
+    border:2px solid white;
+    border-radius:4px;
+    text-align:center;
+    text-shadow:1px 1px 0px black;
+    font-family:sans-serif;
+    font-size:16px;
+    color:white;
+    cursor:pointer;
+}
+#LastButton {
+    display:block;
+    margin-top:8px;
+}
+
+.NewsArea {
+    position:relative;
+    text-align:center;
+    width:100%;
+}
+
+.NewsAreaWrapper {
+    width:1000px;
+    margin:40px auto 40px auto;
+}
+.OneNewsArea, .NewsDivider{
+    display:inline-block;
+}
+.OneNewsArea {
+    position:relative;
+    text-align:left;
+    width:300px;
+}
+.NewsDivider {
+    width:40px;
+}
+.NewsDividerLine {
+    width:80px;
+    height:0px;
+    border-bottom:1px solid grey;
+    -webkit-transform:translateY(-25px) translateX(-30px) rotate(-60deg); 
+    position:absolute;
+}
+.NewsDate {
+    margin-left:10px;
+    font-size:14px;
+    font-family:sans-serif;
+    font-weight:bold;
+    color:grey;
+}
+.NewMark {    
+    margin-left:20px;
+    font-size:14px;
+    font-weight:bold;
+    color:#C90000;
+}
+.NewsTitle {
+    padding:5px 10px 5px 10px;
+    width:300px;
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    text-decoration:underline;
+    cursor:pointer;
+}
+.MagazineIndex {
+    position:relative;
+    padding-top:80px;
+    margin-bottom:50px;
+}
+.MagazineIndex>span {
+    text-align:center;
+    display:block;
+}
+.ContentLabelJp {
+    font-size:17px;
+}
+.ContentLabelEn {
+    font-size:10px;
+    color:#C90000;
+}
+.MagazineTable {
+    width:990px;
+    margin:0px auto;
+}
+table {
+    width:100%;
+    border-collapse:separate;
+    border-spacing:24px;
+}
+.Colspan3 {
+    height:577px;
+}
+td {
+    padding:30px;
+}
+
+td>img {
+    width:100%;
+    margin-bottom:12px;
+    border:1px solid black;
+}
+tbody>tr>td>a {
+    top:0px;
+    margin-bottom:12px;
+    border:1px solid black;
+}
+tbody>tr>td>p {
+    height:80px;
+    font-size:12px;
+    margin-bottom:0px;
+}
+
+.Colspan1 {
+    height:220px;
+}
+.NewsmediaIndex {
+    position:relative;
+    padding-top:80px;
+    margin-bottom:50px;
+}
+.NewsmediaIndex>span {
+    text-align:center;
+    display:block;
+}
+.NewsmediaTable {
+    width:990px;
+    margin:0px auto;
+}
+
+.ServiceLineupArea {
+    position:relative;
+    padding-top:80px;
+    margin-bottom:50px;
+    background-color:lightgrey;
+}
+.ServiceLineupArea>span {
+    text-align:center;
+    display:block;
+}
+
+.AboutBrangistaLabel {
+    position:relative;
+    padding-top:80px;
+    margin-bottom:100px;
+}
+.AboutBrangistaLabel>span {
+    text-align:center;
+    display:block;
+}
+.AboutBrangistaArea {
+    text-align:center;
+    height:125px;
+}
+.AboutBrangistaArea>a {
+    margin:20px;
+    padding:50px 160px;
+    border:1px solid black;
+}
+footer {
+    text-align:center;
+}
+.FooterWrapper {
+    width:880px;
+    height:300px;
+    margin:10px auto;
+    border-top:1px solid grey;
+}
+.FooterWrapper>dl {
+    float:left;
+    text-align:left;
+    margin-top:20px;
+    margin-left:60px;
+}
+.FooterWrapper>dl>dt {
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+.FooterWrapper>dl>dd {
+    font-size:12px;
+    padding-left:10px;
 }
