@@ -2,331 +2,266 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <!--モバイル対応-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>株式会社ブランジスタ | Brangista</title>
+    <!--ブートsとラップのStyle Sheet Load-->
     <link href="./css/bootstrap4/bootstrap.css" type="text/css" rel="stylesheet">
     <link href="./css/mystyle01.css" type="text/css" rel="stylesheet">
-    <script href="./js/bootstrap4/bootstrap.js" type="text/javascript"></script>
-    <script>
-        function ChangeNavIcon(x) {
-            x.classList.toggle("change");
-        }
-    </script>
+    <!--ブートsとラップのJavascript Load-->
+    <script src="./js/bootstrap4/bootstrap.js" type="text/javascript"></script>
+    <!--ジェイクエリーLoad-->
+    <script src="./js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="./js/myjscript.js" type="text/javascript"></script>
+	<script type="text/javascript">
+        document.getElementByID
+	</script>
 </head>
 <body>
-<!--header Start-->
+<!--Header Start-->
 <header>
-	<div class="HeaderArea">
-        <!--Logo and LanguageChange Area Start-->
-        <div class="LogoArea">
-            <a href="./index.html"><img src="./imgs/headerlogo.png" alt="HeaderLogo" id="logoimage"></a>
-        </div>
-        <div class="LangArea">
-            <img src="./imgs/chglng.png" alt="globallogo" id="langlogo">
-            <span>
-                <a class="jp" href="./index.html">日本語</a>
-                &nbsp;|&nbsp;
-                <a class="en" href="./indexen.html">English</a>
-            </span>
-        </div>
-        <div class="NavIconArea" onclick="ChangeNavIcon(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <!--Logo and LanguageChange Area End-->
-        <!--Navigator Area Start-->
-        <div class="NaviArea">
-            <ul class="navs">
-                <li><a href="#">企業情報<span>Company</span></a></li>
-                <li><a href="#">IR<span>IR</span></a></li>
-                <li><a href="#">事業内容<span>Business</span></a></li>
-                <li><a href="#">ニュース<span>News</span></a></li>
-                <li><a href="#">採用情報<span>Recruit</span></a></li>
-                <li><a href="#">お問い合わせ<span>Contact</span></a></li>
-            </ul>
-        </div>
-        <!--Navigator Area End-->
+    <!--HeaderのLogoと言語選択Part Start-->
+	<div class="LogoArea">
+		<img id="LogoImage"  src="./imgs/headerlogo.png" alt="Logo Image" onclick="location.href='./index.html';" />
 	</div>
+	<div class="LangSelectArea">
+		<img src="./imgs/langlogo.png" alt="LangSelectImg" />
+		<a href="./index.html" id="jp">日本語</a><span id="LangDivider">|</span>
+		<a href="https://www.brangista.com/en/" id="en">English</a>
+	</div>
+    <!--HeaderのLogoと言語選択Part End-->
+    <!--ナビゲーションPart Start-->
+	<nav>
+		<ul id="navs">
+			<li class="navli">
+                <span class="navjp">企業情報</span><span class="naven">Company</span>
+                <!--ナビゲーションの下位項目-->
+                <div class="navdropdowncontents">
+                    <span class="ndonecontents firstcontent" onclick="location.href='https://www.brangista.com/company/index.html';">会社概要</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/company/history.html';">会社沿革</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/company/vision.html';">企業理念・経営方針・行動指針</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/company/branch/';">営業拠点</span>
+                </div>
+            </li>
+			<li class="navli">
+                <span class="navjp">IR</span><span class="naven">IR</span>
+                <div class="navdropdowncontents">
+                    <span class="ndonecontents firstcontent" onclick="location.href='https://www.brangista.com/ir/';">IRトップ</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/ir/message.html';">代表メッセージ</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/ir/press/';">IRニュース</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/ir/highlight.html';">業績・財務ハイライト</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/ir/library/';">IRライブラリー</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/ir/stock.html';">株式情報</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/ir/calendar/';">IRカレンダー</span>
+                    <span class="ndonecontents" onclick="https://www.brangista.com/ir/form.html';">IRに関するお問い合わせ</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/ir/disclosure.html';">IRポリシー</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/ir/notice/';">電子公告</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/management/disclaimer.html';">免責事項</span>
+                </div>
+            </li>
+			<li class="navli">
+                <span class="navjp">事業内容</span><span class="naven">Business</span>
+                <div class="navdropdowncontents">
+                    <span class="ndonecontents firstcontent" onclick="location.href='https://www.brangista.com/business/';">事業内容</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/business/magazine.html';">電子雑誌</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/business/solution.html';">ソリューション</span>
+                </div>
+            </li>
+			<li class="navli">
+                <span class="navjp">ニュース</span><span class="naven">News</span>
+                <div class="navdropdowncontents">
+                    <span class="ndonecontents firstcontent" onclick="location.href='https://www.brangista.com/news/';">ニュース</span>
+                </div>
+            </li>
+			<li class="navli">
+                <span class="navjp">採用情報</span><span class="naven">Recruit</span>
+                <div class="navdropdowncontents">
+                    <span class="ndonecontents firstcontent" onclick="location.href='https://www.brangista.com/recruit_brangista/';">採用情報</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/recruit_brangista/media_business.html';">電子雑誌/募集職種</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/recruit_brangista/solution_business.html';">ソリューション/募集職種</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/recruit_brangista/management_accounting.html';">管理部/経理職</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/recruit_brangista/management_clerk.html';">管理部/事務職</span>
+                    <span class="ndonecontents" onclick="location.href='https://www.brangista.com/recruit_brangista/management_corporateplanning.html';">管理部/経営企画職</span>
+                </div>
+            </li>
+			<li class="navli">
+                <span class="navjp">お問い合わせ</span><span class="naven">Contact</span>
+                <div class="navdropdowncontents">
+                    <span class="ndonecontents firstcontent" onclick="location.href='https://www.brangista.com/inquiry/';">お問い合わせ</span>
+                </div>
+            </li>
+		</ul>
+	</nav>
+    <!--ナビゲーションPart End-->
 </header>
-<!--header End-->
-<!--contents Start-->
-<!--Main Area Start-->
-<div class="MainArea">
-    <div class="VideoArea">
-        <img src="./imgs/Penguins.jpg" alt="MainVideo" id="MainVideo">
-        <span id="bgdotted"></span>
+<section class="HeaderBlank"></section>
+<span id="TopButton" onclick="scrolltop();">Top</span>
+<!--動画とスローガンPart Start-->
+<section class="MainArea">
+    <div class="MovieArea">
+        <img id="MainImg" src="./imgs/mainimg.gif" alt="Movie Image" />
+        <span id="BackgroundDotted"></span>
     </div>
+    <span class="SloganAreaBack"></span>
     <div class="SloganArea">
-        <p id="SloganText">次の1ページへ。</p>
-        <div class="SloganInfo">
+        <span id="SloganTitle">次の1ページへ。</span>
+        <span id="SloganInfo">
             <p>電子雑誌が、メディアの歴史に</p>
             <p>新しい時代のページを創造します。</p>
+        </span>
+        <div class="SloganBtn">
+            <span onclick="location.href=''">play movie</span>
+            <span onclick="scrollmove('.MagazineArea');">電子雑誌ラインナップ</span>
+            <div id="ButtonDiv"></div>
+            <span onclick="scrollmove('.NewsMediaArea');">ニュースメディア</span>
+            <span onclick="scrollmove('.ServiceArea');">サービスラインナップ</span>
         </div>
-        <ul class="SloganBtn">
-            <li onclick="location.href='';">play movie</li>
-            <li onclick="">電子雑誌のラインナップ</li>
-            <li id="LastButton" onclick="">サービスラインナップ</li>
+    </div>
+</section>
+<!--動画とスローガンPart End-->
+<!--最新ニュースPart Start-->
+<section class="NewsArea">
+    <div class="NewsIndex">
+        <span>最新NEWS</span>
+    </div>
+    <div class="OneNewsArea" id="NewsArea1">
+        <span class="NewsDate"></span>
+        <span class="NewsNewLabel">New!</span>
+        <span class="NewsContent"></span>
+    </div>
+    <img class="NewsDivider" src="./imgs/newsdivider.png" alt="News Divider" />
+    <div class="OneNewsArea" id="NewsArea2">
+        <span class="NewsDate"></span>
+        <span class="NewsNewLabel">New!</span>
+        <span class="NewsContent"></span>
+    </div>
+    <img class="NewsDivider" src="./imgs/newsdivider.png" alt="News Divider" />
+    <div class="OneNewsArea" id="NewsArea3">
+        <span class="NewsDate"></span>
+        <span class="NewsNewLabel">New!</span>
+        <span class="NewsContent"></span>
+    </div>
+</section>
+<!--最新ニュースPart End-->
+<!--雑誌ラインナップPart Start-->
+<section class="MagazineArea">
+    <div class="SectionIndexArea">
+        <span class="SectionIndexJP">電子雑誌ラインナップ</span>
+        <span class="SectionIndexEn">WEB MAGAZINE</span>
+    </div>
+    <table class="allTable">
+        <tbody class="MagazineTableBody">
+        </tbody>
+    </table>
+</section>
+<!--雑誌ラインナップPart End-->
+<!--ニュースメディアPart Start-->
+<section class="NewsMediaArea">
+    <div class="SectionIndexArea">
+        <span class="SectionIndexJP">ニュースメディア</span>
+        <span class="SectionIndexEn">NEWS&nbsp;MEDIA</span>
+    </div>
+    <table class="allTable">
+        <tbody class="NewsMediaTableBody">
+        </tbody>
+    </table>
+</section>
+<!--ニュースメディアPart End-->
+<!--サービスラインナップPart Start-->
+<section class="ServiceArea">
+    <div class="SectionIndexArea">
+        <span class="SectionIndexJP">サービスラインナップ</span>
+        <span class="SectionIndexEn">SERVICE</span>
+    </div>
+    <div class="ServiceContainer">
+        <ul class="ServiceUl">
+            <li><img class="servicelogo" src="./imgs/service/ecsupport1.png" alt="ecsupport" /><img class="serviceinfo" src="./imgs/service/ecsupport2.png" alt="ecsupport2" /><span class="ServiceClickArea" onclick="window.open('https://www.brangista.com/ec_supportpro/')"></span></li>            <li><img class="servicelogo" src="./imgs/service/ectencho1.png" alt="ectencho1" /><img class="serviceinfo" src="./imgs/service/ectencho2.png" alt="ectencho2" /><span class="ServiceClickArea" onclick="window.open('http://www.ec-tencho.jp/')"></span></li>            <li><img class="servicelogo" src="./imgs/service/butsuryu1.png" alt="butsuryu1" /><img class="serviceinfo" src="./imgs/service/butsuryu2.png" alt="butsuryu2" /><span class="ServiceClickArea" onclick="window.open('https://www.brangista.com/brangista_pd/')"></span></li>
+        </ul>
+        <ul class="ServiceUl ServiceUl2">
+            <li><img class="servicelogo" src="./imgs/service/honyaku1.png" alt="honyaku1" /><img class="serviceinfo" src="./imgs/service/honyaku2.png" alt="honyaku2" /><span class="ServiceClickArea" onclick="window.open('https://www.brangista.com/brangista_translation/')"></span></li>            <li><img class="servicelogo" src="./imgs/service/ekkyou1.png" alt="ekkyou1" /><img class="serviceinfo" src="./imgs/service/ekkyou2.png" alt="ekkyou2" /><span class="ServiceClickArea" onclick="window.open('https://www.brangista.com/transboundary/')"></span></li>            <li><img class="servicelogo" src="./imgs/service/sokuresu1.png" alt="sokuresu1" /><img class="serviceinfo" src="./imgs/service/sokuresu2.png" alt="sokuresu2" /><span class="ServiceClickArea" onclick="window.open('https://www.brangista.com/sokuresu/')"></span></li>
         </ul>
     </div>
-</div>
-<!--Main Area End-->
-<!--News Area Start-->
-<div class="NewsArea">
-    <div class="NewsAreaWrapper">
-        <div class="OneNewsArea">
-            <span class="NewsDate">2019.11.18</span>
-            <span class="NewMark">New!</span>
-            <span class="NewsTitle" onclick="location.href='#';">&nbsp;&nbsp;中尾明慶さんが表紙・巻頭グラビアに登場！「GOODA」vol.50を公開しました。</span>
+</section>
+<!--サービスラインナップPart End-->
+<!--BrangistaについてPart Start-->
+<section class="AboutBrangistaArea">
+    <div class="SectionIndexArea">
+        <span class="SectionIndexJP">ブランジスタについて</span>
+        <span class="SectionIndexEn">ABOUT Brangista</span>
+    </div>
+    <div class="AboutBrangistaContainer">
+        <div class="AboutOneButton" onclick="window.open('https://www.brangista.com/inquiry/')">
+            <img src="./imgs/contactbg.png" alt="contactbg" />
+            <span class="AboutBg"></span>
+            <span class="AboutText">Contact</span>
         </div>
-        <div class="NewsDivider">
-            <div class="NewsDividerLine"></div>
-        </div>
-        <div class="OneNewsArea">
-            <span class="NewsDate">2019.11.17</span>
-            <span class="NewMark">New!</span>
-            <span class="NewsTitle" onclick="location.href='#';">&nbsp;&nbsp;2019年9月期 連結決算発表のお知らせ 10期連続増収、売上・利益すべて創業来最高を達成（PDF:135KB）</span>
-        </div>
-        <div class="NewsDivider">
-            <div class="NewsDividerLine"></div>
-        </div>
-        <div class="OneNewsArea">
-            <span class="NewsDate">2019.11.16</span>
-            <span class="NewMark">New!</span>
-            <span class="NewsTitle" onclick="location.href='#';">&nbsp;&nbsp;2019年9月期（第19期）決算短信（PDF:287KB）</span>
+        <div class="AboutOneButton" onclick="window.open('https://www.brangista.com/recruit_brangista/')">
+            <img src="./imgs/recruitbg.png" alt="recruitbg" />
+            <span class="AboutBg"></span>
+            <span class="AboutText">Recruit</span>
         </div>
     </div>
-</div>
-<!--News Area End-->
-<!--Magazine Area Start-->
-<div class="MagazineIndex">
-    <span class="ContentLabelJp">電&nbsp;子&nbsp;雑&nbsp;誌&nbsp;ラ&nbsp;イ&nbsp;ン&nbsp;ナ&nbsp;ッ&nbsp;プ</span>
-    <span class="ContentLabelEn">W&nbsp;E&nbsp;B&nbsp;&nbsp;&nbsp;M&nbsp;A&nbsp;G&nbsp;A&nbsp;Z&nbsp;I&nbsp;N&nbsp;E</span>
-</div>
-<table class="MagazineTable">
-    <tbody>
-        <tr class="Colspan3">
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-        </tr>
-        <tr class="Colspan3">
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-        </tr>
-        <tr class="Colspan3">
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-        </tr>
-        <tr class="Colspan3">
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-        </tr>
-        <tr class="Colspan3">
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/magazinesample.png" alt="magazine image">
-                <img src="./imgs/magazineinfo.png" alt="magazine label">
-                <p>
-                    トラベルウェブマガジン 「旅色」が、"月刊マガジン"になりました。 毎号、女優や著名人をゲストに迎え、大人の女性のための「旅」の魅力を伝えます。
-                </p>
-            </td>
-        </tr>
-        <tr class="Colspan1">
-            <td colspan="3">
-                <img src="./imgs/gyosei_media.jpg" alt="magazine image">
-            </td>
-        </tr>
-        <tr class="Colspan1">
-            <td colspan="3">
-                <img src="./imgs/own_media.jpg" alt="magazine image">
-            </td>
-        </tr>
-    </tbody>
-</table>
-<!--Magazine Area End-->
-<!--Newsmedia Area Start-->
-<div class="NewsmediaIndex">
-    <span class="ContentLabelJp">ニ&nbsp;ュ&nbsp;ー&nbsp;ス&nbsp;メ&nbsp;デ&nbsp;ィ&nbsp;ア</span>
-    <span class="ContentLabelEn">N&nbsp;E&nbsp;W&nbsp;S&nbsp;&nbsp;&nbsp;M&nbsp;E&nbsp;D&nbsp;I&nbsp;A</span>
-</div>
-<table class="NewsmediaTable">
-    <tbody>
-        <tr class="Colpan3">
-            <td>
-                <img src="./imgs/appsample.png" alt="app image">
-                <img src="./imgs/appinfo.png" alt="app label">
-                <p>
-                    女子のための旅情報をまとめた旅のニュースメディアです。女子が知りたい旅情報がたくさん詰まっています。最新の旅行・グルメ・おでかけ情報なら、旅色プラスで！
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/appsample.png" alt="app image">
-                <img src="./imgs/appinfo.png" alt="app label">
-                <p>
-                    旅色プラスの無料アプリ版です。旅色プラスをもっと手軽にサクサク読みたい読者向けのiPhoneアプリです。ダウンロードでいつでも旅のトレンド情報がご覧いただけます。
-                </p>
-            </td>
-            <td>
-                <img src="./imgs/appsample.png" alt="app image">
-                <img src="./imgs/appinfo.png" alt="app label">
-                <p>
-                    旅行・グルメ・イベントなど、おでかけに関する幅広い情報を、短時間で読める「まとめ」形式で毎日配信している情報メディアです。
-                </p>
-            </td>
-        </tr>
-    </tbody>
-</table>
-<!--Magazine Area End-->
-<!--Service Line-up Area Start-->
-<div class="ServiceLineupArea">
-    <span class="ContentLabelJp">サ&nbsp;ー&nbsp;ビ&nbsp;ス&nbsp;ラ&nbsp;イ&nbsp;ン&nbsp;ナ&nbsp;ッ&nbsp;プ</span>
-    <span class="ContentLabelEn">S&nbsp;E&nbsp;R&nbsp;V&nbsp;I&nbsp;C&nbsp;E</span>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div>
-<!--Service Line-up Area End-->
-<!--About Brangista Area Start-->
-<div class="AboutBrangistaLabel">
-    <span class="ContentLabelJp">ブ&nbsp;ラ&nbsp;ン&nbsp;ジ&nbsp;ス&nbsp;タ&nbsp;に&nbsp;つ&nbsp;い&nbsp;て</span>
-    <span class="ContentLabelEn">A&nbsp;B&nbsp;O&nbsp;U&nbsp;T&nbsp;&nbsp;&nbsp;B&nbsp;r&nbsp;a&nbsp;n&nbsp;g&nbsp;i&nbsp;s&nbsp;t&nbsp;a</span>
-</div>
-<div class="AboutBrangistaArea">
-    <a href="#">Contact</a>
-    <a href="#">Recruit</a>
-</div>
-<!--About Brangista Area End-->
-<!--contents End-->
-<!--footer Start-->
+</section>
+<!--BrangistaについてPart End-->
+    
+    
+<!--サービスラインナップPart End-->
 <footer>
-    <div class="FooterWrapper">
+    <div class="FooterLinks">
         <dl>
-            <dt><a href="">プランジスタ</a></dt>
-            <dd><a href="">企業情報</a></dd>
-            <dd><a href="">IR</a></dd>
-            <dd><a href="">ニュース</a></dd>
-            <dd><a href="">採用情報</a></dd>
-            <dd><a href="">個人情報保護方針</a></dd>
+            <dt>ブランジスタ</dt>
+            <dd><a href="https://www.brangista.com/company/">企業情報</a></dd>
+            <dd><a href="https://www.brangista.com/ir/">IR</a></dd>
+            <dd><a href="https://www.brangista.com/business/">事業内容</a></dd>
+            <dd><a href="https://www.brangista.com/news/">ニュース</a></dd>
+            <dd><a href="https://www.brangista.com/recruit_brangista/">採用情報</a></dd>
+            <dd><a href="https://www.brangista.com/management/privacy.html">個人情報保護方針</a></dd>
         </dl>
         <dl>
-            <dt><a href="">電子雑誌</a></dt>
-            <dd><a href="">トラベルウェブマガジン旅色</a></dd>
-            <dd><a href="">GOODA-グータ</a></dd>
-            <dd><a href="">SUPER CEO</a></dd>
-            <dd><a href="">政経電論</a></dd>
-            <dd><a href="">GINGER mirror</a></dd>
-            <dd><a href="">マドリーム</a></dd>
-            <dd><a href="">Bon Mariage</a></dd>
-            <dd><a href="">Be ViVi</a></dd>
-            <dd><a href="">飲み旅本</a></dd>
-            <dd><a href="">HowB</a></dd>
-            <dd><a href="">LiSTA</a></dd>
-            <dd><a href="">タベサキ</a></dd>
-            <dd><a href="">Double Eagle</a></dd>
+            <dt>電子雑誌</dt>
+            <dd><a href="https://tabiiro.jp/" target="_blank">トラベルウェブマガジン旅色</a></dd>
+            <dd><a href="https://gooda.brangista.com/" target="_blank">GOODA-グーダ</a></dd>
+            <dd><a href="https://superceo.jp/" target="_blank">SUPER CEO</a></dd>
+            <dd><a href="https://seikeidenron.jp/" target="_blank">政経電論</a></dd>
+            <dd><a href="http://webmagazine.brangista.com/gingermirror/" target="_blank">GINGER mirror</a></dd>
+            <dd><a href="http://madream.jp/" target="_blank">マドリーム</a></dd>
+            <dd><a href="https://b-mariage.jp/" target="_blank">Bon Mariage</a></dd>
+            <dd><a href="https://r10.to/bevivi_bra/" target="_blank">Be ViVi</a></dd>
+            <dd><a href="https://nomitabi.tabiiro.jp/" target="_blank">飲み旅本。</a></dd>
+            <dd><a href="https://howb.me/" target="_blank">HowB</a></dd>
+            <dd><a href="https://shoplista.com/" target="_blank">LiSTA</a></dd>
+            <dd><a href="https://tabiiro.jp/gourmet/" target="_blank">タベサキ</a></dd>
+            <dd><a href="https://book.golf-de.com/" target="_blank">Double Eagle</a></dd>
         </dl>
         <dl>
-            <dt><a href="">ニュースメディア</a></dt>
-            <dd><a href="">旅色プラス</a></dd>
-            <dd><a href="">Travel Note</a></dd>
+            <dt>ニュースメディア</dt>
+            <dd><a href="https://plus.tabiiro.jp/" target="_blank">旅色プラス</a></dd>
+            <dd><a href="https://travel-noted.jp/" target="_blank">Travel Note</a></dd>
         </dl>
         <dl>
-            <dt><a href="">ソリューション</a></dt>
-            <dd><a href="">ECサポートサービス</a></dd>
-            <dd><a href="">まとまるEC店長</a></dd>
-            <dd><a href="">Brangista物流</a></dd>
-            <dd><a href="">Brangista翻訳</a></dd>
-            <dd><a href="">個人情報保護方針</a></dd>
-            <dd><a href="">越境ECサポートサービス</a></dd>
-            <dd><a href="">SOKURESU(ソクレス</a>)</dd>
+            <dt>ソリューション</dt>
+            <dd><a href="https://www.brangista.com/ec_supportpro/" target="_blank">ECサポートサービス</a></dd>
+            <dd><a href="https://www.ec-tencho.jp/" target="_blank">まとまるEC店長</a></dd>
+            <dd><a href="https://www.brangista.com/brangista_pd/" target="_blank">Brangista物流</a></dd>
+            <dd><a href="https://www.brangista.com/brangista_translation/" target="_blank">Brangista翻訳</a></dd>
+            <dd><a href="https://www.brangista.com/transboundary/" target="_blank">越境ECサポートサービス</a></dd>
+            <dd><a href="https://www.brangista.com/sokuresu/" target="_blank">SOKURESU(ソクレス)</a></dd>
         </dl>
+        <div class="FooterLogoArea">
+            <img src="./imgs/footerlogo.png" />
+        </div>
+    </div>
+    <div class="FooterCopyright">
+        <span id="fcupsymbol" onclick="scrolltop();">^</span>
+        <span id="fctext">&#9400;&nbsp;2000&nbsp;Brangista&nbsp;Inc.</span>
+    </div>
+    <div class="FooterGroup">
+        <ul>
+            <li>株式会社ブランジスタは、株式会社ネクシィーズグループ（東証一部上場 4346）のグループ企業です。</li>
+            <li><img id="nexyzlogo" src="./imgs/nexyzlogo.png" alt="nexys logo" onclick="window.open('https://www.nexyzgroup.jp/')" /></li>
+            <li><img src="./imgs/jpxlogo.png" alt="jpx logo" /></li>
+        </ul>
     </div>
 </footer>
-<!--footer end-->
 </body>
 </html>
